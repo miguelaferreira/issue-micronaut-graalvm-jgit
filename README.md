@@ -8,9 +8,22 @@ Micronaut Version: 3.5.2
 $ mn create-cli-app --jdk 17 -l java -t junit -b gradle -f graalvm  cli-app-latest
 ```
 
+Commands used to build the app jar:
+```bash
+$ ./gradlew build
+```
+
+Tool execution using the jar:
+```bash
+$ java -jar build/libs/cli-app-latest-0.1-all.jar
+23:06:14.485 [main] INFO  i.m.context.env.DefaultEnvironment - Established active environments: [cli]
+Cloned repo to /tmp/git-clone/micronaut-core/.git
+```
+
+
 Commands used to build the native binary:
 ```bash
-$ ./gradlew nativecompile
+$ ./gradlew nativeCompile
 ```
 
 GraalVM used is version `22.0.0.2 Java 17 CE`.
